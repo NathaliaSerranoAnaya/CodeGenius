@@ -1,6 +1,7 @@
 body{
     background-color: #f4f7f6;
     margin-top:20px;
+    font-family:Arial, Helvetica, sans-serif;
 }
 .card {
     background: #fff;
@@ -8,20 +9,17 @@ body{
     border: 0;
     margin-bottom: 30px;
     border-radius: .55rem;
-    position: relative;
+    position: absolute;
     width: 100%;
     box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
 }
-
-.logo {
-    display: block;
-    width: 5px; 
-    height: 5px; 
-    margin: 0px; 
-  }
-  
+.banner {
+    width: 1420px;
+    height: 400;
+    margin: 0;
+}
 .chat-app .people-list {
-    width: 280px;
+    width: 260px;
     position: absolute;
     left: 0;
     top: 0;
@@ -48,21 +46,21 @@ body{
 }
 
 .people-list .chat-list li:hover {
-    background: #a3d6ed;
+    background: #b4afed;
     cursor: pointer
 }
 
 .people-list .chat-list li.active {
-    background: #57a5c9
+    background: #8e86e5;
 }
 
 .people-list .chat-list li .name {
-    font-size: 15px
+    font-size: 15px;
 }
 
 .people-list .chat-list img {
-    width: 45px;
-    border-radius: 50%
+    width: 50px;
+    height: 50px;
 }
 
 .people-list img {
@@ -72,12 +70,18 @@ body{
 
 .people-list .about {
     float: left;
-    padding-left: 8px
+    padding-left: 8px;
 }
 
 .people-list .status {
-    color: #0b2a42;
-    font-size: 13px
+    color: #414b53;
+    font-size: 12px
+}
+
+.status {
+    color: #414b53;
+    font-size: 12px;
+    font-weight: normal;
 }
 
 .chat .chat-header {
@@ -87,8 +91,8 @@ body{
 
 .chat .chat-header img {
     float: left;
-    border-radius: 40px;
-    width: 40px
+    border-radius: 50px;
+    width: 50px
 }
 
 .chat .chat-header .chat-about {
@@ -125,14 +129,24 @@ body{
 
 .chat .chat-history .message-data-time {
     color: #434651;
-    padding-left: 6px
+    padding-left: 6px;
+    font-size: 11px;
+}
+
+.chat .chat-history .chat-date {
+    color: #434651;
+    padding-left: 6px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .chat .chat-history .message {
-    color: #444;
+    color: #ffffff;
     padding: 18px 20px;
     line-height: 26px;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 7px;
     display: inline-block;
     position: relative
@@ -153,7 +167,7 @@ body{
 }
 
 .chat .chat-history .my-message {
-    background: #efefef
+    background: #aea8ea
 }
 
 .chat .chat-history .my-message:after {
@@ -165,23 +179,23 @@ body{
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-bottom-color: #efefef;
+    border-bottom-color: #aea8ea;
     border-width: 10px;
     margin-left: -10px
 }
 
 .chat .chat-history .other-message {
-    background: #e8f1f3;
+    background:#8e86e5;
     text-align: right
 }
 
 .chat .chat-history .other-message:after {
-    border-bottom-color: #e8f1f3;
+    border-bottom-color: #8e86e5;
     left: 93%
 }
 
 .chat .chat-message {
-    padding: 20px
+    padding: 50px
 }
 
 .online,
@@ -261,4 +275,45 @@ body{
         height: calc(100vh - 350px);
         overflow-x: auto
     }
+}
+
+.form-control {
+    border-color: #aea8ea;
+    border-style: solid;
+}
+
+.form-new-message-control {
+    width: 1000px;
+    height: 40px;
+    border-color: #aea8ea;
+    border-style: solid;
+    margin-left: 0;
+}
+
+.AddPhotos {
+    width: 30px;
+    height: 30;
+    margin-top: 10px;
+    float:left;
+    transition: transform 0.3s ease;
+}
+
+.AddFiles {
+    width: 37px;
+    height: 30;
+    margin-top: 10px;
+    float: left;
+    transition: transform 0.3s ease;
+}
+
+.AddPhotos:hover, 
+.AddFiles:hover {
+  transform: scale(1.1);
+}
+
+.profile-picture{
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    float: left;
 }
